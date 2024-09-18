@@ -1,0 +1,1012 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --greenBackGround: #0B9586;
+    --Nav-box-shadow: #0000000F;
+    --btn-yellow: #FFBB1C;
+    --listItem-green: #84BD3A;
+    --primaryWhite: #FFFFFF;
+    --primaryBlack: #101828;
+    --btn-black: #2A3334;
+    --progres-black: #575757;
+    --SecondaryWhite: #475467;
+    --section4-background: #00000091;
+    --section5-background: #FFBB1C0D;
+    --section7-right-background: #3CAB900F;
+    --FooterBackground: #283646;
+    --FooterTextColor: #92989F;
+    --FooterBtnTextColor: #B3BDC7;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Start header */
+
+header nav {
+    display: flex;
+    background-color: var(--greenBackGround);
+    justify-content: space-around;
+    color: var(--primaryWhite);
+    align-items: center;
+    text-align: center;
+}
+
+header nav a {
+    color: var(--primaryWhite);
+}
+
+header nav .logo {
+    display: flex;
+}
+
+header nav .logo span {
+    background-image: url(../images/image\ 9.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 6em;
+    opacity: .9;
+    height: 2em;
+}
+
+header nav .logo span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    background-color: #0a8678;
+    mix-blend-mode: multiply;
+}
+
+header nav ul {
+    display: flex;
+    gap: 5em;
+}
+
+header nav ul li {
+    transition: .3s;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+header nav ul li.active {
+    background-color: #0a8c7e;
+    border-radius: 5px;
+    width: 130px;
+    height: 43px;
+    box-shadow: 0 3px 0 0 #076258;
+}
+
+header nav .call p {
+    margin-left: 300px;
+}
+
+header nav .call .call-us {
+    margin-left: 375px;
+}
+
+@media screen and (max-width: 1070px) {
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 1em;
+        justify-content: start;
+    }
+
+    header nav .call p {
+        font-size: 1em;
+    }
+}
+
+
+
+@media screen and (max-width: 880px) {
+    header nav {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+
+    header nav .logo {
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: start;
+    }
+
+    header nav .call p {
+        font-size: 1em;
+        text-align: center;
+        margin-left: 2px;
+    }
+
+    header nav .call .call-us {
+        /* font-size: 1em; */
+        margin-left: 2px;
+    }
+}
+
+/* End header */
+
+/* Start Hero */
+.hero {
+    background: url(../images/solar-panels-meadow\ 1.png);
+    width: 100%;
+    height: 73vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 0 7%;
+}
+
+.hero .prog {
+    color: var(--primaryWhite);
+    display: flex;
+    gap: 12px;
+    width: 50%;
+}
+
+.hero .prog .line {
+    position: relative;
+    margin-top: 5px;
+    background-color: var(--progres-black);
+    height: 4px;
+    width: 30%;
+}
+
+.hero .prog .line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primaryWhite);
+    height: 4px;
+    width: 40%;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20em;
+    color: var(--primaryWhite);
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.hero .content h1 {
+    font-size: 2.3em;
+    width: 53%;
+    margin-top: -47px;
+}
+
+.hero .content p {
+    font-size: 1.1em;
+    line-height: 1.9em;
+    width: 48%;
+}
+
+.hero .butts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero .butts button {
+    padding: 10px;
+    width: 220px;
+    font-weight: 400;
+    border-radius: 109px;
+    border: none;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.hero .butts button:hover,
+.bt-yellow:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.hero .butts .bt1 {
+    background-color: var(--greenBackGround);
+    color: var(--primaryWhite);
+}
+
+.bt-yellow {
+    background-color: var(--btn-yellow);
+    color: var(--btn-black);
+    border-radius: 109px;
+    border: none;
+    transition: .3s;
+}
+
+@media screen and (max-width: 810px) {
+
+    section.page-content .Section1 .right svg {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 553px) {
+
+    .hero .content h1 {
+        width: 100%;
+        font-size: 80%;
+    }
+
+    .hero .content p {
+        width: 100%;
+        font-size: 90%;
+    }
+
+    section.page-content .Section1 .right img {
+        display: none;
+    }
+
+}
+
+/* End Hero */
+
+/* Start Sections One */
+
+section.page-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+}
+
+section.page-content .Section1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    text-align: left;
+    justify-content: space-between;
+    padding: 6%;
+
+}
+
+section.page-content .Section1 .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-family: var(--Font);
+
+}
+
+section.page-content .Section1 .left h1 {
+    width: 60%;
+    margin-bottom: -3px;
+}
+
+section.page-content .Section1 .left p {
+    font-weight: 400;
+    line-height: 24px;
+    width: 71%;
+}
+
+section.page-content .Section1 .left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    font-weight: bold;
+}
+
+section.page-content .Section1 .left ul span {
+    color: var(--listItem-green);
+    margin-right: .5em;
+    letter-spacing: 4px;
+}
+
+section.page-content .Section1 .right {
+    position: relative;
+    height: 50%;
+}
+
+section.page-content .Section1 .right svg {
+    position: absolute;
+    bottom: 10%;
+    left: -40.5%;
+    z-index: 2;
+    width: 100%;
+    height: 32%;
+}
+
+@media screen and (max-width:915px) {
+    section.page-content .Section1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section.page-content .Section1 .left {
+        width: 100%;
+        font-size: 90%;
+    }
+
+    section.page-content .Section1 .left p {
+        margin-bottom: 1em;
+    }
+
+    section.page-content .Section1 .left ul li {
+
+        width: 100%;
+    }
+
+}
+
+/* End Sections One */
+
+/* Start section Two */
+
+section.page-content .section2 {
+    background: url(../images/8116\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    height: 527px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 6%;
+}
+
+section.page-content .section2 div {
+    text-align: left;
+    margin-left: 70px;
+}
+
+section.page-content .section2 div h1 {
+    font-size: 46px;
+    color: var(--primaryWhite);
+}
+
+section.page-content .section2 div p {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--primaryWhite);
+    width: 64%;
+    line-height: 28px;
+}
+
+section.page-content .section2 div button {
+    height: 41px;
+    width: 11em;
+}
+
+@media screen and (max-width:725px) {
+    section.page-content .section2 div h1 {
+        font-size: 100%
+    }
+
+    section.page-content .section2 div p {
+        font-size: 100%
+    }
+
+}
+
+/* Start section Two */
+
+/* Start section Three */
+
+section.page-content .section3 {
+    padding: 4%;
+    
+}
+
+section.page-content .section3 .title {
+    text-align: -webkit-center;
+    text-align: center;
+}
+
+section.page-content .section3 .title h1 {
+    font-size: 2.2em;
+}
+
+section.page-content .section3 .title p {
+    color: var(--progres-black);
+}
+
+
+section.page-content .section3 .cards-container {
+    display: flex;
+    gap: 1em;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+section.page-content .section3 .cards-container .card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--Font);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+}
+
+section.page-content .section3 .cards-container .card h1 {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-left: 15px;
+    margin-bottom: -6px;
+}
+
+section.page-content .section3 .cards-container .card p {
+    line-height: 24px;
+    margin-left: 15px;
+}
+
+section.page-content .section3 .cards-container .card span,
+section.page-content .section5 .right span {
+    display: flex;
+    gap: 10px;
+    color: var(--greenBackGround);
+    transition: .3s;
+    margin-top: -28px;
+}
+
+section.page-content .section3 .cards-container .card span:hover,
+section.page-content .section5 .right span:hover {
+    cursor: pointer;
+}
+
+section.page-content .section3 .cards-container .card span svg,
+section.page-content .section5 .right span {
+    align-self: center;
+}
+
+@media screen and (max-width:860px) {
+    section.page-content .section3 .cards-container .card p {
+        font-size: 90%;
+    }
+}
+
+/* End section Three */
+
+/* Start section Four */
+
+section.page-content .section4 {
+    display: flex;
+    background: url(../images/8116\ 1\ \(1\).png);
+    background-size: cover;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 505px;
+    font-family: var(--Font);
+
+}
+
+section.page-content .section4 div {
+    position: relative;
+    width: 60%;
+    height: 15em;
+    color: var(--primaryWhite);
+    padding: 1em;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+
+}
+
+section.page-content .section4 div::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: .7;
+    border-radius: 9px;
+    position: absolute;
+    top: 0;
+    background-color: #000000CC;
+}
+
+section.page-content .section4 h1 {
+    filter: brightness(550%);
+
+    font-weight: 600;
+    font-size: 2.2em;
+    margin-bottom: .9em;
+}
+
+section.page-content .section4 p {
+    filter: brightness(550%);
+
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1em;
+
+}
+
+@media screen and (max-width:1000px) {
+    section.page-content .section4 h1 {
+        font-size: 100%;
+        ;
+    }
+
+    section.page-content .section4 div p {
+        font-size: 80%;
+
+
+    }
+}
+
+@media screen and (max-width:630px) {
+    section.page-content .section4 h1 {
+        font-size: 100%;
+        ;
+    }
+
+    section.page-content .section4 div p {
+        font-size: 75%;
+
+
+    }
+
+    section.page-content .section4 div {
+        width: 70%;
+        height: 20em;
+    }
+}
+
+/* End section Four */
+
+/* Start section Five */
+
+section.page-content .section5 {
+    display: flex;
+    padding: 5em;
+    text-align: left;
+    background-color: var(--section5-background);
+}
+
+section.page-content .section5 .left {
+    width: 35%;
+}
+
+section.page-content .section5 .left h1 {
+    width: 61%;
+}
+
+section.page-content .section5 .left p {
+    line-height: 25px;
+    width: 67%;
+}
+
+section.page-content .section5 .right {
+    width: 84%;
+    display: grid;
+    grid-template-columns: 32% 32%;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+section.page-content .section5 .right .card {
+    padding: 24px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3CAB90;
+    border-radius: 7px;
+}
+
+section.page-content .section5 .right .card img {
+    width: 100%;
+    position: relative;
+    height: 78px;
+    border-radius: 9px;
+}
+
+section.page-content .section5 .right h1 {
+    font-size: 22px;
+}
+
+section.page-content .section5 .right p {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1em;
+}
+
+section.page-content .section5 .right span {
+    transition: .3s;
+}
+
+section.page-content .section5 .right span svg {
+    align-self: center;
+}
+
+@media screen and (max-width:1215px) {
+    section.page-content .section5 .right {
+        grid-template-columns: 70%;
+
+    }
+
+    section.page-content .section5 .left {
+        width: 100%;
+
+    }
+
+    section.page-content .section5 {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+}
+
+@media screen and (max-width:890px) {
+    section.page-content .section5 {
+        padding: 5%;
+    }
+
+    section.page-content .section5 .right {
+        grid-template-columns: auto;
+
+
+    }
+
+    section.page-content .section5 .left {
+        width: 100%;
+
+    }
+
+    section.page-content .section5 {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    section.page-content .section5 .right span {
+        width: 100%;
+    }
+
+}
+
+/* End section Five */
+
+/*  Start Section Six  */
+
+section.page-content .section6 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section.page-content .section6 .title h1 {
+    font-size: 2.2em;
+}
+
+section.page-content .section6 .title p {
+    font-size: 1.2em;
+    color: var(--progres-black);
+}
+
+section.page-content .section6 .content {
+    display: flex;
+    gap: 2em;
+    text-align: left;
+    padding: 0 18%;
+}
+
+section.page-content .section6 .content .card {
+    padding: 20px;
+    border: 1px solid #3CAB90;
+    border-radius: 9px;
+    background-color: #3CAB900D;
+}
+
+section.page-content .section6 .content .card h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+section.page-content .section6 .content .card p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 500px) {
+    section.page-content .section6 .content .card {
+        margin-bottom: 10px;
+    }
+
+    section.page-content .section6 .content {
+        display: inline-block;
+    }
+
+}
+
+/*  End Section Six  */
+
+/* Start Section Seven */
+
+section.page-content .section7 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px;
+    gap: 2em;
+    text-align: left;
+}
+
+section.page-content .section7 .left {
+    display: flex;
+    width: 25em;
+    flex-direction: column;
+    padding: 2em;
+}
+
+section.page-content .section7 .left h1 {
+    font-size: 2.2em;
+    width: 64%;
+}
+
+section.page-content .section7 .left p {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+section.page-content .section7 .right {
+    display: flex;
+    width: 45em;
+    border-radius: 20px;
+    background-color: #3CAB900F;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+
+section.page-content .section7 .right .say {
+    margin-top: -10px;
+    font-size: 15px;
+    color: var(--greenBackGround);
+}
+
+section.page-content .section7 .right .sub-title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+section.page-content .section7 .right .content p {
+    width: 91%;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+section.page-content .section7 .right .comment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+
+}
+
+section.page-content .section7 .right .comment .name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section.page-content .section7 .right .comment .name h2 {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+section.page-content .section7 .right .comment .name h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+@media screen and (max-width:1090px) {
+    section.page-content .section7 {
+        justify-content: flex-start;
+
+    }
+
+}
+
+@media screen and (max-width:390px) {
+    section.page-content .section7 {
+        padding: 0em;
+    }
+
+    section.page-content .section7 .right .comment .name {
+        font-size: 90%;
+    }
+
+    section.page-content .section7 .right .content p {
+        font-size: 100%;
+        width: 100%;
+
+    }
+
+    section.page-content .section7 .left h1 {
+        font-size: 1.5em;
+
+    }
+
+}
+
+/* End Section Seven */
+
+/* Start Footer */
+
+footer {
+    background-color: var(--FooterBackground);
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+}
+
+footer .top {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .top .left img {
+    margin-bottom: 2.5em;
+    height: 50%;
+    width: 30%;
+}
+
+footer .top .left ul {
+    display: flex;
+    gap: 2em;
+    font-size: 1em;
+    color: var(--primaryWhite);
+}
+
+footer .top .left ul li {
+    transition: .3s;
+}
+
+footer .top .left ul li:hover {
+    cursor: pointer;
+    color: var(--FooterTextColor);
+}
+
+footer .top .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer .top .right h4 {
+    font-weight: 400;
+    color: var(--primaryWhite);
+    margin-bottom: 4px;
+}
+
+footer .top .right .button {
+    padding: 4px;
+    margin-left: 10px;
+    position: relative;
+    color: var(--FooterTextColor);
+    background-color: #B3BDC7;
+    height: 3em;
+    border-radius: 2em;
+}
+
+footer .top .right .button p {
+    font-size: 80%;
+}
+
+footer .top .right .button button {
+    position: absolute;
+    font-size: 100%;
+    width: 35%;
+    top: 0;
+    right: 0;
+    font-weight: 400;
+    height: 100%;
+    color: var(--primaryWhite);
+    text-align: center;
+}
+
+
+footer .line {
+    align-self: center;
+    width: 70%;
+    height: 2px;
+    margin: 2em 0;
+    background-color: #71777D;
+}
+
+footer .bottom {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: var(--FooterTextColor);
+}
+
+footer .bottom ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 580px) {
+    footer .top {
+        display: inline-block;
+    }
+
+    footer .bottom {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    footer .top .left ul a {
+        font-size: 90%;
+    }
+
+    footer {
+
+        padding: 2em;
+    }
+
+    footer .top .right .button p {
+        font-size: 70%;
+    }
+
+    footer .top .right .button button {
+        font-size: 80%;
+    }
+
+}
+
+/* End Footer */
