@@ -1,24 +1,41 @@
-*{
-  margin: 0;
-  padding: 0;
+/*--------------------------------------------------------------
+# Global Rules
+--------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family:  'Inter';
-  text-decoration: none;
-  list-style: none;
-  -webkit-scroll-behavior: smooth;
-  scroll-behavior: smooth;}
-
-:root{
-  --black-color:#1F1F1F;
-  --of-white-color:#545454;
-  --white-color:#fff;
-  --arrow-background:#464646;
-  --footer-text-color:#D1D1D1;
-
-
 }
 
-.black-btn{
+:root {
+  --black-color: #1F1F1F;
+  --of-white-color: #545454;
+  --white-color: #fff;
+  --arrow-background: #464646;
+  --footer-text-color: #D1D1D1;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.black-btn {
   width: 12em;
   font-size: 24px;
   border-radius: 4px;
@@ -27,325 +44,329 @@
   border: none;
   padding: .5em 2em;
   transition: .3s;
-
-
 }
-/* start nav bar */
-header{
-  padding: .6em 1rem;
+/*--------------------------------------------------------------
+# Global Rules
+--------------------------------------------------------------*/
 
-}
-.navbar-brand {
-    margin-right: auto;
-    margin-left: 0;
-  }
-  .navbar-nav {
-    margin: 0 auto;
-  }
-  .navbar .btn {
-    width: 7em;
-    font-size: 20px;
-  }
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 
-  .navbar .btn:hover,.black-btn:hover {
-    background-color: #6c6c6c;
-    color: var(--black-color);
-    cursor: pointer;
-  }
-.navbar  .container-fluid{
-font-weight: 600;
-}
-.navbar-toggler-icon i{
-    font-size: 30px;
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
 
+.navbar {
+  margin-bottom: 100px;
 }
-.navbar ul li{
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar .btn {
+  width: 7em;
+  font-size: 20px;
+}
+
+.navbar ul li {
   margin-left: 30px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
+  font-weight: 500;
   color: var(--of-white-color);
-  transition: .3s;
-}
-.navbar ul li a:hover{
-  transform: scale(1.1);
-  color: #000000;
-}
-@media screen and (max-width:946px) {
-
-  .navbar .btn{
-  font-size: 3vw;
-  padding: .2vh .5vw ;
 }
 
-.navbar ul li{
-  font-size: 3vw;
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: var(--black-color);
 }
 
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
 
-}
-@media screen and (max-width:295px) {
-    .navbar .navbar-brand{
-        width: 50%;
-    }
-    .navbar-brand img{
-        width: 100%;
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
 
-    }
-  
-}
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-/* start Hero */
-
-header .hero{
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2% 1% ;
+  padding: 2% 1%;
 }
 
-
-header .hero .top h5{
+.hero .top h5 {
   font-size: 10em;
   color: var(--black-color);
 }
 
-header .hero .top p{
+.hero .top p {
+  color: #666;
+}
+
+.hero .top p {
   font-size: 1.5em;
   width: 70%;
   color: var(--black-color);
 }
+
 .card {
   border: none;
 }
 
-header .hero .bottom,header .hero .bottom .left {
- display: flex;
- flex-wrap: wrap;
- flex-direction: row-reverse;
- justify-content: space-between;
+.hero .bottom,
+.hero .bottom .left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
-header .hero .bottom .right  {
+
+.hero .bottom .right {
   position: relative;
   z-index: 4;
-  width: 40%;
+  
 }
-header .hero .bottom .right .black-btn{
-  position: fixed;
 
+.hero .bottom .right .black-btn {
+  position: fixed;
   padding: 1%;
   height: 8vh;
   right: 1%;
   top: 30%;
   width: 5%;
-  z-index: 10;
+  z-index: 9999;
 }
-header .hero .bottom .right .black-btn i{
-font-size: 2vw; 
+
+.hero .bottom .right .black-btn i {
+  font-size: 2vw;
 }
 
 
-header .hero .bottom .right span{
+.hero .bottom .right span {
   position: absolute;
-border-radius: 2px;
-   top: -10%;
-  left: -10%;
+  border-radius: 2px;
+  top: -6%;
+  left: -3%;
   z-index: 3;
   height: 30%;
-  width: 30%;
+  width: 22%;
   border: 2px solid var(--black-color);
-
 }
 
-header .hero .bottom .left{
+.hero .bottom .right img {
+  position: relative;
+  z-index: 9999;
+}
+
+.hero .bottom .left {
+  display: flex;
   flex-direction: column;
-  width: 50%;
   justify-content: space-between;
 }
-header .hero .bottom .left ul{
+
+
+
+.hero .bottom .left ul {
   display: flex;
-  width: 100%;
   color: var(--of-white-color);
-  flex-wrap: wrap;
-justify-content: space-around; 
- font-weight: 400;
+  justify-content: space-around;
+  font-weight: 400;
   font-size: 3em;
+  margin-top: 100px;
 }
 
-header .hero .bottom .left ul li{
+.hero .bottom .left ul li {
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-header .hero .bottom .left ul li h3{
-  font-size: .5em;
-}
 
+.hero .bottom .left ul li h3 {
+  font-size: 0.5em;
+}
 
 @media screen and (max-width:1473px) {
 
-  header .hero .top h5{
-  font-size: 9vw;
- 
-}
+  .hero .top h5 {
+    font-size: 9vw;
 
-header .hero .top p{
-  font-size: 3vw;
-  width: 90%;
-}
-
-header .hero .bottom .left button{
-  width: 30vw;
-  font-size: 3vw;
   }
-  header .hero .bottom .right .black-btn{
+
+  .hero .top p {
+    font-size: 3vw;
+    width: 90%;
+  }
+
+  .hero .bottom .left button {
+    width: 30vw;
+    font-size: 3vw;
+  }
+
+  .hero .bottom .right .black-btn {
     width: 7%;
   }
-  header .hero .bottom  img{
-    max-width: 100%;
-    
-    margin-bottom: 1em;
-      }
 
+  .hero .bottom img {
+    max-width: 100%;
+
+    margin-bottom: 1em;
+  }
 
 }
-@media screen and (max-width:761px){
-  header .hero .bottom{
+
+@media screen and (max-width: 767px) {
+  
+  .hero .bottom .left ul {
+    font-size: 0;
+  }
+
+}
+
+@media screen and (max-width:761px) {
+  .hero .bottom {
     flex-direction: column;
   }
-  header .hero .bottom img{
-width: 85vw;
-max-width: 300%;
-margin-bottom: 1em;
+
+  .hero .bottom img {
+    width: 85vw;
+    max-width: 300%;
+    margin-bottom: 1em;
   }
-  header .hero .bottom .right span{
+
+  .hero .bottom .right span {
     width: 10vw;
     height: 5vh;
 
   }
-  header .hero .bottom .count{
+
+  .hero .bottom .count {
     font-size: 9vw;
 
   }
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
 
-/* start Section1 */
-
-.PageContent{
-  padding:  1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 9em
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services{
+  margin-bottom: 50px;
+  padding: 40px 60px;
 }
 
-
-.section1 .title{
+.featured-services .title {
   display: flex;
   gap: 5px;
   margin-bottom: 2em;
-
-}
-.section1 h1{
-
-font-size: 58px;
-font-weight: 600;
 }
 
-.section1  span{
-  margin-top: 35px;
+.featured-services h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.featured-services span {
+  margin-top: 30px;
   display: block;
   background-color: var(--black-color);
-  
   width: 3%;
   height: 2px;
+}
 
+.featured-services .service-item {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.featured-services .service-item .icon img {
+  width: 40px;
+  margin-bottom: 76px;
+}
+
+.featured-services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.featured-services .service-item .description {
+  color: #666;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .featured-services h1 {
+    font-size: 36px;
   }
 
-.section1 .card{
-  width: 20vw;
-  flex-direction: row;
-  
-}
-
-.section1 .card h5{
-font-size: 30px;
-font-weight: 600;
-line-height: 36.31px;
-
-}
-
-.section1 .card p{
-font-size: 22px;
-font-weight: 500;
-line-height: 36.34px;
-
-}
-
-@media screen and (max-width:1092px) {
-  .section1 .row{
-    flex-direction: column;
-    gap: 1em;
-
-
+  .featured-services span {
+    margin-top: 24px;
   }
-  .section1{
-    justify-content: center;
+
+  .featured-services .service-item .icon img {
+    margin-top: -36px;
   }
-  .section1 .row .card{
-
-    width: 60vw;
-  }
-  .section1 .title h1{
-    font-size: 9vw;
-  }
-  .section1 .title span{
-    margin-top: 5%;
-
 }
-.section1 .row .card h5{
-  font-size: 6vw;
-}
-.section1 .row .card p{
-  font-size: 3vw;
-}
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
 
-}
-
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-/* start Section2 And Section 3 */
-.section2,.section3{
+/*--------------------------------------------------------------
+# Designing Section
+--------------------------------------------------------------*/
+.section2,
+.section3 {
   display: flex;
   justify-content: center;
+  padding: 40px 68px;
 }
 
-.section2 .card{
-  width: 90%;
+.section2 .card .lines span {
+  background-color: #ccc;
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 .section2 .card h5,
 .section3 .card h5 {
-font-size: 58px;
-font-weight: 600;
-
+  font-size: 58px;
+  font-weight: 600;
 }
+
 .section2 .card p,
 .section2 .card h3,
-.section3 .card p
-{
-font-size: 24px;
-font-weight: 500;
-line-height: 39.65px;
-
+.section3 .card p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 39.65px;
 }
 
-.section2 .card h3,.section3 .card h3{
-font-weight: 600;
+.section2 .card p,
+.section3 .card p {
+  color: #666;
 }
-.section3 .card h3{
-  margin-top:10px ;
+
+.section2 .card h3,
+.section3 .card h3 {
+  font-weight: 600;
+}
+
+.section3 .card h3 {
+  margin-top: 10px;
   font-size: 30px;
 }
 
@@ -353,336 +374,476 @@ font-weight: 600;
   display: flex;
   flex-direction: column;
   gap: 1em;
-
 }
 
-.section2 .card .content .line{
+.section2 .card .content .line {
   display: flex;
   justify-content: space-between;
-  width: 50%;
 }
 
-@media screen and (max-width:1092px) {
- 
-  .section2 .card h5, .section3 .card h5{
-    font-size: 9vw;
-  }
-  .section1 .title span{
-    margin-top: 5%;
-
-}
-.section2 .card h3{
-  font-size: 3vw;
-}
-.section2 .card .line svg{
-  width: 10%;
-}
-.section3 .card h3{
-  font-size: 3vw;
-
-}
-.section2 .card p,.section3 .card p{
-  font-size: 3vw;
-}
-.section2 .card .content .line{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.section3 .card .row {
+  flex-direction: row-reverse;
 }
 
-.section2 .card button{
-  width: 30vw;
-  font-size: 3vw;
-}
-
-
-
-}
-
-.section3  .card .row{
-  flex-direction: row-reverse ;
-}
-
-.section3  .card .cont{
+.section3 .card .cont {
   position: relative;
   display: flex;
   gap: 5%;
   padding: 1em 1em;
 }
-.section3  .card .cont svg{
+
+.section3 .card .cont img {
+  width: 5%;
+  height: 5%;
+}
+
+.section3 .card .cont svg {
   top: 0;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width:1092px) {
 
-/* start Section 4 */
+  .section2 .card h5,
+  .section3 .card h5 {
+    font-size: 9vw;
+  }
 
-.section4{
+  .section1 .title span {
+    margin-top: 5%;
+  }
+
+  .section2 .card h3 {
+    font-size: 3vw;
+  }
+
+  .section2 .card .line svg {
+    width: 10%;
+  }
+
+  .section3 .card h3 {
+    font-size: 3vw;
+  }
+
+  .section2 .card p,
+  .section3 .card p {
+    font-size: 3vw;
+  }
+
+  .section2 .card .content .line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .section2 .card button {
+    width: 30vw;
+    font-size: 3vw;
+  }
+
+}
+/*--------------------------------------------------------------
+# /Designing Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# About Us Section
+--------------------------------------------------------------*/
+.section4 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20em;
+  margin-bottom: 10em;
+  margin-top: 10em;
 }
 
-.section4 .top{
+.section4 .top {
   display: flex;
   gap: 3em;
   flex-direction: row-reverse;
-  justify-content: start;
-}
-.section4 .top h1{
-  font-weight: 600;
-color: var(--black-color);
+  justify-content: center;
 }
 
-.section4 .top img{
+.section4 .top h1 {
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.section4 .top img {
   border-radius: 5px;
 }
 
-.section4 .bottom{
- position: relative;
+.section4 .bottom {
+  position: relative;
 }
-.section4 .bottom .cards{
+
+.section4 .bottom .cards {
+  width: 50%;
   top: -32em;
-  left: 15em;
+  left: 30em;
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
   gap: 2em;
 }
-.section4 .bottom .card{
-  width: 28%;
-background-color: var(--black-color);
-color: var(--white-color);
-font-size: 24px;
-font-weight: 500;
-line-height: 39.65px;
-padding: 2em;
-}
-.section4 .bottom .card p.card-text{
-  margin: 10% 0 ;
 
+.section4 .bottom .card {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39.65px;
+  padding: 2em;
 }
 
-.section4 .bottom .card .person{
+.section4 .bottom .card .person {
   display: flex;
   flex-wrap: wrap;
   gap: .5em;
 }
-.section4 .bottom .card .person h6{
+
+.section4 .bottom .card .person h6 {
   font-size: 24px;
 }
-.section4 .bottom .card .person p{
+
+.section4 .bottom .card .person p {
   font-size: 20px;
   color: var(--of-white-color);
 }
 
-.section4 .bottom .card img{
+.section4 .bottom .card img {
   width: 72px;
-height: 72px;
-border-radius: 50%;
+  height: 72px;
+  border-radius: 50%;
+}
 
+.section4 .arrow {
+  position: relative;
+  top: 10px;
 }
-.section4 .bottom  .arrow{
-  position: absolute;
-  top:0;
-  left: 0 ;
 
+.section4 .arrow img {
+  width: 3%;
+  left: 15em;
+  position: relative;
 }
-.section4 .bottom  .arrow svg{
-  transition: .3s;
-}
-.section4 .bottom  .arrow svg:hover{
-  scale: 1.1;
-  cursor: pointer;
-}
-@media screen and (max-width:1298px) {
-  .section4{
-    margin-bottom: 35em;
+
+@media screen and (max-width: 1900px) {
+
+  .section4 .bottom .card {
+    width: 100% !important;
   }
-  .section4 .bottom .card{
-    width: 70% !important;
-  }
-  .section4 .bottom .card{
+
+  .section4 .bottom .card {
     padding: 1% 1%;
   }
+
+  .section4 .arrow {
+    left: 0;
+  }
+
+  .section4 .arrow img {
+    left: 0;
+  }
+
+  .section4 .bottom .cards {
+    top: -32em;
+    left: 15em;
+    position: absolute;
+    display: flex;
+    gap: 2em;
+    width: 76%;
+  }
+
   .section4 .bottom .card p.card-text,
   .section4 .bottom .card .person h6,
-  .section4 .bottom .card .person p{
-    font-size: 3vw
-  } ;
+  .section4 .bottom .card .person p {
+    font-size: 3vw;
+  }
+
 }
 
- @media screen and (max-width:977px) {
-  .section4{
-    margin-bottom: 45em;
+@media screen and (max-width: 977px) {
+  .section4 {
+    margin-bottom: 20em;
+    margin-top: 0;
   }
-  .section4 .bottom .card{
+
+  .section4 .bottom .card {
     width: 70% !important;
   }
-  .section4 .top{
+
+  .section4 .top {
     flex-direction: column;
   }
-  .section4 .bottom .card  svg{
+
+  .section4 .bottom .card svg {
     width: 20px;
   }
+
   .section4 .bottom .card {
     line-height: 110%;
   }
-  .section4 .top img{
+
+  .section4 .top img {
     width: 100%;
     height: 32em;
   }
-  .section4 .bottom .person img{
-   width: 10vw;
-   height: 10vw;
+
+  .section4 .bottom .person img {
+    width: 10vw;
+    height: 10vw;
   }
-  .section4 .top h1{
+
+  .section4 .top h1 {
     font-size: 6vw;
-  }  
-  .section4 .bottom .cards{
-    left: 37%;
-    top: -20em;
   }
-  .section4 .bottom .arrow svg{
+
+  .section4 .bottom .cards {
+    left: 35%;
+    top: -23em;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .section4 .bottom .arrow svg {
     width: 2em;
- }
- }
+  }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  .section4 .arrow {
+    position: unset;
+  }
+}
+/*--------------------------------------------------------------
+# /About Us Section
+--------------------------------------------------------------*/
 
-/* start Section 5 */
-.section5 .card{
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+.section5 .card {
   margin-bottom: 6em;
   margin-left: 50%;
   transform: translateX(-50%);
   width: 40%;
 }
 
-.section5 h5{
-font-size: 58px;
-font-weight: 600;
-margin-bottom: 1em;
+.section5 h5 {
+  font-size: 58px;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
 
-} 
-.section5 p{
-font-size: 24px;
-font-weight: 500;
-line-height: 39.65px;
+.section5 p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 39.65px;
+  color: #666;
 }
 
 @media screen and (max-width:1012px) {
-  
-  .section5 h5{
-font-size: 9vw;
-} 
-.section5 p{
-font-size: 3vw;
-}
+
+  .section5 h5 {
+    font-size: 9vw;
+  }
+
+  .section5 p {
+    font-size: 3vw;
+  }
 }
 
 @media screen and (max-width:1350px) {
-  
+
   .section5 .card {
     width: 100%;
   }
 
 }
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/ 
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  color: white;
+  background-color: #1f1f1f;
+  font-size: 14px;
+  padding-bottom: 50px;
+  position: relative; 
+}
 
-/* start Section 5 */
-footer{
-  position: relative;
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .footer-about .logo {
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.footer .footer-about .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.footer .footer-about .logo span {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer .footer-about p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer .social-links a {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background-color: var(--black-color);
-  color: var(--white-color);
-  padding: .6em 8rem;
-}
-footer div{
-    display: flex;
-    padding-top: 2%;
-    flex-direction: column;
-  gap: 2%;
-}
-footer svg{
-  color: #fff;
-  margin-bottom: 3em;
-}
-footer h5{
-font-size: 24px;
-font-weight: 600;
-}
-footer p{ 
-  font-size: 22px;
-  width: 70%;
-  font-weight: 500;
-  line-height: 26.63px;  
-  color: var(--footer-text-color);
-  }
-  footer ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2em;
-  }
-
-  footer .subscribe{
-    top: -4em;
-    background-color: var(--white-color);
-    position: absolute;
-    padding: 1em;
-    flex-direction: row;
-    width: 40%;
-height:   5em ;
-border-radius: 4px ;
   align-items: center;
-box-shadow: 0px 10px 100px 0px #00000024;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  background-color: #ccc;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul i {
+  padding-right: 2px;
+  font-size: 12px;
+  line-height: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  color: #ccc;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.footer .footer-links ul a:hover {
+  color: #fff;
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer .newsletter-form {
+  width: 30%;
+  margin: 0 auto;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: flex;
+  background-color: white;
+  transition: 0.3s;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -46px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer .input-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer .input-container i {
+  position: absolute;
+  left: 10px;
+  color: #ccc;
+  bottom: 10px;
+  font-size: 17px;
+}
+
+.footer .input-container input[type=email] {
+  width: 100%;
+  padding: 8px 10px 8px 35px; 
+  border: 0;
+  background-color: white;
+  color: #000;
+  border-radius: 4px;
+}
+
+.footer .input-container input[type=email]::placeholder {
+  color: #ccc;
+}
+
+.footer .input-container input[type=email]:focus-visible {
+  outline: none;
+}
+
+.footer .newsletter-form input[type=submit] {
+  border: 0;
+  font-size: 16px;
+  padding: 10px;
+  background: black;
+  color: white;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.footer .newsletter-form input[type=submit]:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .footer .newsletter-form {
+    width: 80%; 
+    top: -20px; 
+    flex-direction: column; 
+    padding: 10px; 
   }
-    footer .subscribe p{
-font-size: 24px;
-color: #8C8C8C;
-font-weight: 500;
-padding: 0 1em;
-    }
-    footer .subscribe p i{
-      margin-right: 15px;
-    }
 
-
-  @media screen and (max-width:1500px) {
-     footer .subscribe p,footer .subscribe i{
-      font-size: 2vw;
-     }
-       footer .subscribe .black-btn{
-      font-size: 2vw;
-      width: 30%;
-     }
-     footer .subscribe{
-      width: 70%;
-
-     }
-     
-    
+  .footer .input-container {
+    width: 100%;
+    margin-bottom: 10px; 
   }
- @media screen and (max-width:500px){
-  footer div{
-    gap: 0;
-  }
-  footer .subscribe{
-      top: -2em;
-          padding: .5em;
-          height: 3em;
-          
-     }
-     footer  h5{
-      font-size: 6vw;
-     
-          }
-     footer  p{
-      font-size: 3vw;
-     
 
-          }
- }
+  .footer .newsletter-form input[type=submit] {
+    width: 100%;
+  }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
